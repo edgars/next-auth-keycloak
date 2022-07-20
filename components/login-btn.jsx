@@ -9,9 +9,11 @@ export default function BtnLogin() {
     return (
       <>
        <p className={styles.description}>
-        Signed in as {session.user.email} <br />
+        Signed in as {session.user.name} :   {session.user.email} <br />
 
         </p>
+
+        <button className={styles.description} onClick={() => signOut()}>Sign out</button>
 
         <p className={styles.description}>
 
@@ -19,7 +21,7 @@ export default function BtnLogin() {
 
 
         </p>
-        <button className={styles.description} onClick={() => signOut()}>Sign out</button>
+
       </>
     )
   }
